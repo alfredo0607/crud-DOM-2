@@ -40,9 +40,8 @@ editar.addEventListener("click", (e) => {
 
 const fetchData = async () => {
   const res = await fetch(
-    "https://api.escuelajs.co/api/v1/products?offset=0&limit=10"
+    "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=81a950c980fc1ddaf786565707f64517&page=1"
   );
-
   const data = await res.json();
   formatterData(data.results);
 };
